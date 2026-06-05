@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class SopaDeLetrasGUI {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.util.HashSet;
+import java.util.Set;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
-    }
+public class SopaDeLetrasGUI extends JFrame {
+
+    private final String[][] tablero = {
+            {"J","A","V","A","X","P","L","M","N","O"},
+            {"Q","W","E","R","T","Y","U","I","O","P"},
+            {"S","W","I","N","G","A","B","C","D","E"},
+            {"L","K","J","H","G","F","D","S","A","Q"},
+            {"M","Y","S","Q","L","Z","X","C","V","B"},
+            {"N","M","A","V","E","N","H","J","K","L"},
+            {"P","O","R","A","C","L","E","R","T","Y"},
+            {"A","S","D","F","G","H","J","K","L","Z"},
+            {"C","O","D","I","G","O","X","Y","Z","W"},
+            {"T","E","C","N","O","L","O","G","I","A"}
+    };
+
+    private final Set<String> palabras = new HashSet<>();
+    private final DefaultListModel<String> modeloLista = new DefaultListModel<>();
+
+
 }
