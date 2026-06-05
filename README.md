@@ -1,7 +1,9 @@
 # -_sopa_letras_java_21_intellij_IDEA_swing_- :.
 # Sopa de Letras en Java 21 + IntelliJ IDEA + Swing:
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9447da14-5492-4eab-834d-fa70fab921cb" />  
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9447da14-5492-4eab-834d-fa70fab921cb" />    
+
+<img width="1276" height="1079" alt="image" src="https://github.com/user-attachments/assets/ae54f229-2ca5-43cb-83c7-2de630a4f26b" />    
 
 ```
 Proyecto completo desarrollado en **Java 21** utilizando **Swing (Interfaz Gráfica)** para implementar una **Sopa de Letras** interactiva.
