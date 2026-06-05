@@ -94,7 +94,48 @@ public class SopaDeLetrasGUI extends JFrame {
     }
 
     private void buscarPalabra() {
+        String palabra = txtPalabra.getText()
+                .trim()
+                .toUpperCase();
+
+        if (palabra.isEmpty()) {
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Ingrese una PALABRA . "
+            );
+            return;
+        }
+
+        if (palabras.contains(palabra)) {
+            if (!modeloLista.contains(palabra)) {
+                modeloLista.addElement(palabra);
+
+                JOptionPane.showMessageDialog(
+                        this,
+                        "palabra ENCONTRADA: " + palabra
+                );
+            } else {
+                JOptionPane.showMessageDialog(
+                        this,
+                        "la palabra ya fue ENCONTRADA. "
+                );
+            }
+        } else {
+                JOptionPane.showMessageDialog(
+                        this,
+                        "PALABRA no ENCONTRADA! "
+                );
+            }
+            txtPalabra.setText("");
+        }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            SopaDeLetrasGUI ventana =
+                    new SopaDeLetrasGUI();
+
+            ventana.setVisible(true);
+
+        });
     }
-
-
-}
+}      
