@@ -21,6 +21,30 @@ public class SopaDeLetrasGUI extends JFrame {
 
     private final Set<String> palabras = new HashSet<>();
     private final DefaultListModel<String> modeloLista = new DefaultListModel<>();
+    
+    private JTextField txtPalabra;
+    private JList<String> listaEncontradas;
+    
+    public SopaDeLetrasGUI() {
+        
+        palabras.add("JAVA");
+        palabras.add("SWING");
+        palabras.add("MYSQL");
+        palabras.add("MAVEN");
+        palabras.add("ORACLE");
+        palabras.add("CODIGO");
+        palabras.add("TECNOLOGIA");
+        
+        setTitle("Sopa de LETRAS");
+        setSize(800, 600);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        
+        inicializarComponentes();
+    }
+
+    private void inicializarComponentes() {
+    }
 
 
 }
