@@ -64,7 +64,36 @@ public class SopaDeLetrasGUI extends JFrame {
                 panelTablero.add(letra);
             }
         }
-        
+
+        add(panelTablero, BorderLayout.CENTER);
+
+        JPanel panelInferior = new JPanel();
+        panelInferior.setLayout(new FlowLayout());
+
+        JLabel lblBuscar = new JLabel("Palabra:");
+        txtPalabra = new JTextField(15);
+        JButton btnBuscar = new JButton("BUSCAR");
+
+        btnBuscar.addActionListener(e -> buscarPalabra());
+
+        panelInferior.add(lblBuscar);
+        panelInferior.add(txtPalabra);
+        panelInferior.add(btnBuscar);
+
+        add(panelInferior, BorderLayout.SOUTH);
+        JPanel panelDerecho = new JPanel(new BorderLayout());
+        JLabel lblEncontradas = new JLabel("Encontradas ");
+        listaEncontradas = new JList<>(modeloLista);
+
+        panelDerecho.add(lblEncontradas, BorderLayout.NORTH);
+        panelDerecho.add(
+                new JScrollPane(listaEncontradas),
+                BorderLayout.CENTER
+        );
+        add(panelDerecho, BorderLayout.EAST);
+    }
+
+    private void buscarPalabra() {
     }
 
 
