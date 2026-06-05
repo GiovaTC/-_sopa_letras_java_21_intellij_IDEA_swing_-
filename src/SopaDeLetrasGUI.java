@@ -44,6 +44,27 @@ public class SopaDeLetrasGUI extends JFrame {
     }
 
     private void inicializarComponentes() {
+
+        setLayout(new FlowLayout());
+
+        JPanel panelTablero = new JPanel(new GridLayout(10, 10));
+
+        Font fuente = new Font("Arial", Font.BOLD, 18);
+        for (int fila = 0; fila < 10; fila++) {
+            for (int col = 0; col < 10; col++) {
+                JLabel letra = new JLabel(
+                        tablero[fila][col],
+                        SwingConstants.CENTER
+                );
+                letra.setBorder(
+                        BorderFactory.createLineBorder(Color.GRAY)
+                );
+
+                letra.setFont(fuente);
+                panelTablero.add(letra);
+            }
+        }
+        
     }
 
 
